@@ -1,22 +1,27 @@
 import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
-import db from '../../../database'
+import userController from "../../../controllers/userController"
+
+import GithubProvider from "next-auth/providers/github"
 
 export const authOptions = {
-  secret: 'Secre22t',
+  secret: 'J@ss3!c63@1',
   providers: [
+    GithubProvider({
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET,
+    }),    //add external providor like google and github 
     CredentialsProvider({
       name: "credentials",
       credentials: {
-        username: { label: "Email", type: "text", placeholder: ".." },
+        email: { label: "Email", type: "text", placeholder: ".." },
         password: { label: "Password", type: "password" }
       },
       async authorize(credentials, req) {
         try {
-          const user = await db.User.findOne()
-          //console.log('user to be authenticated is :', user)
+          const user = await userController.getone(credentials.email,credentials.password)
+          console.log(user);
           if (user) {
-            console.log('user in auth ', user)
             return user
           } else {
             throw new Error('you need to register')

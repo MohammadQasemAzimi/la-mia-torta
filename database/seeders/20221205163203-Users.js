@@ -10,7 +10,7 @@ module.exports = {
         email: 's@g.com',
         phoneNumber: '00397898789',
         address: 'Qalai Shada',
-        password: '123asdIsBadboy',
+        password: '123',
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -20,7 +20,7 @@ module.exports = {
         email: 'a@z.com',
         phoneNumber: '00397898788',
         address: 'Qalai Shada 2',
-        password: '123asdIsStillBadboy',
+        password: '123',
         createdAt: new Date(),
         updatedAt: new Date(),
       }], {});

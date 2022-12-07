@@ -24,7 +24,7 @@ module.exports = {
       imageUrl: {
         type: Sequelize.STRING
       },
-      UserID: {
+      UserId: {
         type: Sequelize.INTEGER
       },
       createdAt: {

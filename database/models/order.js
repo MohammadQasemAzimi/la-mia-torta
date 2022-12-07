@@ -14,8 +14,8 @@ const initOrder = (sequelize, DataTypes) => {
     }
   }
   Order.init({
-    CakeID: DataTypes.INTEGER,
-    UserID: DataTypes.INTEGER,
+    CakeId: DataTypes.INTEGER,
+    UserId: DataTypes.INTEGER,
     status: DataTypes.STRING
   }, {
     sequelize,

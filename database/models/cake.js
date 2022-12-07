@@ -20,7 +20,7 @@ const initCake = (sequelize, DataTypes) => {
     price: DataTypes.INTEGER,
     location: DataTypes.STRING,
     imageUrl: DataTypes.STRING,
-    UserID: DataTypes.INTEGER
+    UserId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Cake',

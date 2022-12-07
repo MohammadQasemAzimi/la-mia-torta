@@ -9,10 +9,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      CakeID: {
+      CakeId: {
         type: Sequelize.INTEGER
       },
-      UserID: {
+      UserId: {
         type: Sequelize.INTEGER
       },
       status: {

@@ -4,22 +4,22 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
      await queryInterface.bulkInsert('Cakes', [{
-      name:'Yellow', 
-      description: 'Hello', 
+      name:'Chocolate Cake', 
+      description: ' a cake flavored with melted chocolate, cocoa powder, or both', 
       location:'Milano, Italia',
       price:'300',
       imageUrl:'asdasd',
-      UserID: '1',
+      UserId: '1',
       createdAt: new Date(),
       updatedAt: new Date()
      },
      {
-      name:'Green', 
-      description: 'Nothing', 
+      name:'Stawberry Cake', 
+      description: 'Strawberry cake is typically made of strawberries and sweetened whipped cream', 
       location:'Milano, Italia',
       price:'350',
       imageUrl:'asdasdasd',
-      UserID: '2',
+      UserId: '2',
       createdAt: new Date(),
       updatedAt: new Date()
      }], {});
