@@ -1,0 +1,76 @@
+.container {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .row {
+    height: atuo;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .cardBody {
+    margin: 0 10%;
+    border: 2px solid #c9c9c9;
+    border-radius: 15px;
+  }
+  
+  .formGroup {
+    background-color: white;
+    transition: 0.5s;
+  }
+  
+  .formGroup label {
+    font-size: large;
+  }
+  
+  .container a {
+    color: #333;
+  }
+  
+  .container a:hover {
+    color: #dd3173;
+    text-decoration: none;
+  }
+  
+  .card {
+    border: 0.40rem solid #f8f9fa;
+    top: 10%;
+  }
+  
+  .formControl {
+    font-size: 1rem;
+    width: 90%;
+    padding: 20px;
+    padding: 25px 15px;
+    margin-bottom: 1.3rem;
+    border: 3px solid #bdbdbd;
+    border-radius: 5px;
+  }
+  
+  .formControl:focus {
+    border: 3px solid #dd3173;
+    outline: 0;
+    box-shadow: none;
+  }
+  
+  .btn {
+    color: #dd3173;
+    font-size: large;
+    width: 30%;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #dd3173;
+    border-radius: 15px;
+    margin-bottom: 5%;
+  }
+  
+  .btn:hover {
+    color: white;
+    font-size: large;
+    background-color: #dd3173;
+    border-color: #df8c96;
+    transition: .3s;
+  
+  }

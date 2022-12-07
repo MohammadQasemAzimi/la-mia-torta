@@ -12,6 +12,8 @@ export default function Home(props) {
         <button onClick={() => signOut()}>Sign out</button> :
         <button onClick={() => signIn()}>Sign in</button>
       }
+      <h1>From now on You can buy your cake easily here</h1>
+      
     </>
   )
 }
