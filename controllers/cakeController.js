@@ -24,6 +24,16 @@ const cakesController = {
     cake.update(data)
     return JSON.parse(JSON.stringify(cake))
   },
+
+
+  delete: async (data) => {
+    console.log(db.models)
+    const cake = await db.Cake.delete(data)
+    return JSON.parse(JSON.stringify(cake))
+  },
+
+
+ 
   
 }
 

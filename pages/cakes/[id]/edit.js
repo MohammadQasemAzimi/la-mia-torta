@@ -27,24 +27,20 @@ export default function NewCake({ cake }) {
             <div className={styles.cardBody}>
               <form method="POST" action={`/api/cakes/${cake.id}`}>
                 <div className={styles.formGroup}>
-                  <label htmlFor="name" className={styles.label}>Name:</label><br />
+                  <label htmlFor="name" className={styles.label}>:</label><br />
                   <Input defaultValue={cake.name} type="text" name='name' className={styles.formControl} id="name" placeholder="Name of the cake" />
                 </div>
                 <div className={styles.formGroup}>
-                  <label htmlFor="description" className={styles.label}>description:</label><br />
+                  <label htmlFor="description" className={styles.label}></label><br />
                   <Input defaultValue={cake.description} type="text" name='description' className={styles.formControl} id="description" placeholder="Description of the cake" />
                 </div>
                 <div className={styles.formGroup}>
-                  <label htmlFor="price" className={styles.label}>Price:</label><br />
-                  <Input defaultValue={cake.price} type="number" name="price" className={styles.formControl} id="price" placeholder="Price" />
+                  <label htmlFor="price" className={styles.label}></label><br />
+                  <Input defaultValue={cake.price} type="text" name="price" className={styles.formControl} id="price" placeholder="Price" />
                 </div>
                 <div className={styles.formGroup}>
-                  <label htmlFor="location" className={styles.label}>Location:</label><br />
-                  <Input defaultValue={cake.location} type="text" name="location" className={styles.formControl} id="location" placeholder="please write the address" />
-                </div>
-                <div className={styles.formGroup}>
-                  <label htmlFor="user id" className={styles.label}>User ID:</label><br />
-                  <Input defaultValue={cake.UserId} type="number" name="UserId" className={styles.formControl} id="user id" placeholder="write the user id" />
+                  <label htmlFor="location" className={styles.label}></label><br />
+                  <Input defaultValue={cake.location} type="text" name="location" className={styles.formControl} id="location" placeholder="write your address" />
                 </div>
                 <div className={styles.formGroup}>
                   <label htmlFor="imageUrl" className={styles.label}>Insert photo:</label><br />

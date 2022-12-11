@@ -17,7 +17,7 @@ export default function Component({ cake }) {
           <p>{cake.price}</p>
           <Link className={styles.button} href={`/cakes/${cake.id}/edit`}>Edit</Link>
           <Link className={styles.Delete} href="#">Delete</Link>
-          
+
         </div>
 
       </div>
