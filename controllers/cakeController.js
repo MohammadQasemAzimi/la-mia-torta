@@ -19,7 +19,7 @@ const cakesController = {
     return JSON.parse(JSON.stringify(cake))
   },
   
-  create: async (id, data) => {
+  update: async (id, data) => {
     const cake = await db.Cake.findByPk(id)
     cake.update(data)
     return JSON.parse(JSON.stringify(cake))

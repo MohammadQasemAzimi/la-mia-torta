@@ -25,7 +25,7 @@ export default function NewCake({ cake }) {
           <div className={styles.card}>
             <h2 className={styles.cardTitle}> Edite your cake here</h2>
             <div className={styles.cardBody}>
-              <form method="PUT" action={`/api/cakes/${cake.id}`}>
+              <form method="POST" action={`/api/cakes/${cake.id}`}>
                 <div className={styles.formGroup}>
                   <label htmlFor="name" className={styles.label}>Name:</label><br />
                   <Input defaultValue={cake.name} type="text" name='name' className={styles.formControl} id="name" placeholder="Name of the cake" />

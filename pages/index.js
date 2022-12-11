@@ -1,7 +1,8 @@
 import styles from '../styles/Home.module.css';
 import db from '../database';
 import Card from '../components/Card';
-import Navbaker from '../components/Navbaker'
+import Navbar from '../components/Navbar'
+import { useEffect, useState } from "react";
 //import {getSession, signIn, signOut} from 'next-auth/react'; 
 
 import { getSession } from 'next-auth/react';
@@ -10,21 +11,39 @@ export default function Home(props) {
   const curUser = props.currentUser;
   //send the props current user to navbar componont 
   const cakes = props.cakes;
+
+  const [query, setQuery] = useState("");
+  
   return (
     <>
-      <Navbaker curuser={curUser}></Navbaker>
+      <Navbar></Navbar>
       <div className={styles.containerImg}>
         <div className={styles.container}>
-          <div className={styles.searchForm}>
-            <form className={styles.serachForm} onsubmit="event.preventDefault();" role="search">
-              <label className={styles.serachlabel} for="search">Serach you Cake in here ...</label>
-              <input className={styles.serachinput} id="search" type="search" placeholder="Search..." autofocus required />
-              <button className={styles.serachbutton} type="submit">Go</button>
-            </form>
+          <div className={styles.app}>
+            <input
+              type="text"
+              placeholder="Search..."
+              className={styles.search}
+              onChange={(e) => setQuery(e.target.value)}
+            />
           </div>
-          <dev className={styles.cards}>
-            {cakes.map((cake, index) => (<h1 key={cake.id}><Card cake={cake} key={cake.id} /></h1>))}
-          </dev>
+          <div className={styles.cards}>
+            
+            <table className={styles.list}>
+              {cakes.filter(cake => cake.name.toLowerCase().includes(query) || 
+                                    cake.description.toLowerCase().includes(query) || 
+                                    cake.location.toLowerCase().includes(query)).map((cake) => (
+                <tr key={cake.id} className={styles.listItem}>
+                  <th>{cake.name}</th>
+                  <th>{cake.description}</th>
+                  <th>{cake.price}</th>
+                  <th>{cake.location}</th>
+                </tr>
+              ))}
+            </table>
+            
+            {cakes.map((cake, index) => (<Card cake={cake} key={cake.id} />))}
+          </div>
         </div>
       </div>
     </>

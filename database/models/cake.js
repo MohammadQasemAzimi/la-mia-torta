@@ -16,7 +16,7 @@ const initCake = (sequelize, DataTypes) => {
   }
   Cake.init({
     name: DataTypes.STRING,
-    description: DataTypes.STRING,
+    description: DataTypes.TEXT,
     price: DataTypes.INTEGER,
     location: DataTypes.STRING,
     imageUrl: DataTypes.STRING,

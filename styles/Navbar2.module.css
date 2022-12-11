@@ -1,0 +1,54 @@
+.navbar{
+    display: flex;
+    background-color: blueviolet;
+    height: 9vh;
+    width: 100%;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    
+}
+
+.logo{
+    flex: 1;
+    height: 7vh;
+    width: 100%;
+    margin-left: 100px;
+}
+.Home{
+    flex: 1;
+    height: 7vh;
+    width: 100%;
+    margin-right:500px;
+
+}
+.profile{
+    flex: 1;
+    height: 7vh;
+    width: 7vh;
+    padding: 5px;
+    margin-right: 100px;
+}
+
+.upload{
+    flex: 1;
+    height: 7vh;
+    width: 100%;
+    margin-right: 50px;
+}
+
+.orders{
+    flex: 1;
+    height: 7vh;
+    width: 100%;
+    margin-right: 50px;
+}
+.myAccount{
+    background-color: aqua;
+    width: 30px;
+    height: 30px;
+}
+.profile{
+    font-size: 12px;
+}

@@ -9,7 +9,7 @@ export default async function handler(req, res) {
         const cake = await cakeController.create({
             name, description, price, location, imageUrl, UserId
         })
-        res.status(200).redirect(`/baker`);
+        res.status(200).redirect(`/bakers`);
     }
     // the redirect metod sends the user to the specified path
 
