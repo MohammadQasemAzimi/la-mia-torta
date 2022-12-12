@@ -3,7 +3,8 @@ import { Input} from 'reactstrap'
 import { useState } from 'react'
 import Navbar from '../../components/Navbar'
 import { getSession } from 'next-auth/react';
-import userController from '../../controllers/userController'
+//import userController from '../../controllers/userController'
+import db from '../../database'
 
 export default function NewCake(props) {
   const curUser = props.currentUser
@@ -76,7 +77,10 @@ export async function getServerSideProps(req, res) {
       }
     }
   }
+  const user = await db.User.findOne({ where: { email: session.user.email } })
+  const serilizeduser = JSON.parse(JSON.stringify(user))
   return {
-    props: { currentUser: user || null },
+    props: { currentUser: serilizeduser || null },
   }
+
 }
