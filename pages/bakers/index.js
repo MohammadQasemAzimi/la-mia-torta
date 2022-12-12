@@ -17,11 +17,12 @@ export default function Home(props) {
   return (
     <>
       <Navbar></Navbar>
-      <div className={styles.containerImg}>
-        <div className={styles.container}>
-
-          <div className={styles.cards}>
-            {cakes.map((cake, index) => (<UpdateCard cake={cake} key={cake.id} />))}
+      <div className={styles.container1}>
+        <div className={styles.containerImg}>
+          <div className={styles.container}>
+            <div className={styles.cards}>
+              {cakes.map((cake, index) => (<UpdateCard cake={cake} key={cake.id} />))}
+            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import styles from '../../styles/Home.module.css';
 import db from '../../database';
-import Navcustomer from '../../components/Navcustomer';
+import Navbar from '../../components/Navbar';
 //import {getSession, signIn, signOut} from 'next-auth/react'; 
 import { getSession } from 'next-auth/react';
 import { Input } from 'reactstrap';
@@ -12,7 +12,7 @@ export default function getProfile(props) {
   /* console.log('the user is :',user) */
   return (
     <>
-      <Navcustomer curuser={curUser}></Navcustomer>
+      <Navbar curuser={curUser}></Navbar>
       <div className={styles.row}>
         <div className={styles.card}>
           <div className={styles.cardBody}>

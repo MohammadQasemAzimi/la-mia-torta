@@ -1,3 +1,22 @@
+.container{
+  position: relative;
+  width: 100%;
+  margin-left: 5%;
+}
+
+.searchBar{
+  width: 100%;
+}
+.searchBar input {
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 0 10px;
+  height: 40px;
+  width: 400px;
+  border: 1px solid blueviolet;
+  border-radius: 5px 5px 0 0;
+}
+
 /*Home page Start --disply the flats in home page--*/
 .containerImg {
   flex-direction: column;
@@ -12,47 +31,6 @@
   background-position: center;
   background-size: fill;
 }
-.container{
-  position: relative;
-}
-
-/*Just for serach end*/
-.searchForm {
-  display: grid;
-  width: 100%;
-  justify-content: center;
-}
-
-.serachForm {
-  width: 30rem;
-  border: 1px solid gray;
-  border-radius: 5px;
-  margin-top: 5px;
-}
-
-.serachinput {
-  height: 30px;
-  width: 100%;
-  padding: 0 1.6rem;
-  z-index: 1;
-}
-
-.serachinput:not(:placeholder-shown) {
-  height: 30px;
-  width: 100%;
-}
-
-.serachlabel {
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
-
-/*Just for serach end*/
 
 
 .cards{

@@ -2,12 +2,11 @@ import Link from "next/link"
 import styles from "../styles/Card.module.css";
 
 export default function Component({ cake }) {
-  console.log('image url is ', cake.imageUrl)
   return (
     <>
       <div className={styles.card} >
         <div className={styles.cardimg}>
-          <img src={cake.imageUrl} className={styles.cardimg1} />
+          <img src={cake.imageUrl} className={styles.cardimg1} alt="cardImage"/>
         </div>
         <div className={styles.cardDetails}>
           <div className={styles.topDetails}>

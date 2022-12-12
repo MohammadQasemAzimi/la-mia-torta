@@ -18,13 +18,8 @@
 }
 
 .navBranding {
-    color: white;
-    text-decoration: none;
-    list-style: none;
-    height: 70px;
-    width: 10%;
-    border: 1px solid white;
-    background-image: url("../public/image/logo-withoutBG.png");
+    height: 100px;
+    width: 100%;
 }
 
 .navLink {
@@ -33,7 +28,8 @@
 }
 
 .navLink:hover {
-    color: black;
+    text-shadow: 1px 1px 10px white;
+    transition: 0.8s;
 }
 
 .navItem {
@@ -81,6 +77,7 @@
     text-align: left;
 }
 
+
 .dropdownContent a:hover {
     background-color: blueviolet;
 }
@@ -90,7 +87,8 @@
 }
 
 .dropdown:hover .dropbtn {
-    color: black;
+    text-shadow: 1px 1px 10px white;
+    transition: 0.8s;
 }
 
 

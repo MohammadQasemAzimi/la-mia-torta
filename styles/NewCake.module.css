@@ -1,33 +1,27 @@
 .container{
+  height: 700px;
   width: 100%;
 }
 
 .row {
   display: flex;
-  flex-direction: column;
-  height: 700px;
-  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
 }
 
 .card{
   height: 100%;
-  width:80%;
-  flex-wrap: wrap;
+  width:100%;
   margin: 10px 10% 0 10%;
-  background-color: blueviolet;
   border-radius: 15px 15px 0 0;
 }
 
-.cardBody {
-  height: 100%;
-  margin: 0 10%;
-  border-radius: 15px;
-}
-
 .formGroup {
-  background-color: blueviolet;
+  height: 100px;
   transition: 0.5s;
+  text-align: center;
 }
 
 .formGroup label {
@@ -42,14 +36,17 @@
   color: #DD3173;
   text-decoration: none;
 }
-
+.label1{
+  color: blueviolet;
+  font-size: 20px;
+}
 .formControl {
   font-size: 1rem;
   width: 90%;
   padding: 20px;
   padding: 25px 15px;
   margin-bottom: 1.3rem;
-  border: 3px solid #BDBDBD;
+  border: 3px solid blueviolet;
   border-radius: 5px;
 }
 
@@ -60,11 +57,11 @@
 }
 
 .btn {
-  color: #DD3173;
+  color: blueviolet;
   font-size: large;
   width: 30%;
   padding: 0.6rem 1.2rem;
-  border: 2px solid #DD3173;
+  border: 2px solid blueviolet;
   border-radius: 15px;
   margin-bottom: 5%;
 }

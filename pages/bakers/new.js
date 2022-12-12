@@ -1,10 +1,10 @@
 import styles from '../../styles/NewCake.module.css'
-import { Input} from 'reactstrap'
+import { Input } from 'reactstrap'
 import { useState } from 'react'
 import Navbar from '../../components/Navbar'
 import { getSession } from 'next-auth/react';
-//import userController from '../../controllers/userController'
 import db from '../../database'
+//import userController from '../../controllers/userController'
 
 export default function NewCake(props) {
   const curUser = props.currentUser
@@ -27,37 +27,34 @@ export default function NewCake(props) {
       <div className={styles.container}>
         <div className={styles.row}>
           <div className={styles.card}>
-            <div className={styles.cardBody}>
-              <form method="POST" action="/api/cakes">
+            <form method="POST" action="/api/cakes">
               <div className={styles.formGroup}>
-                  <label htmlFor="imgUploud" className={styles.label}>Upload Your Cake image </label><br />
-                  <input type="file" name="imgUploud" className={styles.formControl} id="imgUploud" onChange={handlimgUpload}/>
-                  <input type="hidden" name='imageUrl' value={url} />
-                </div>
-                <div className={styles.formGroup}>
-                  <input type="hidden" name='usersession' value={curUser.email} />
-                  <label htmlFor="name" className={styles.label}></label><br />
-                  <Input type="text" required name='name' className={styles.formControl} id="name" placeholder="Name of the cake" />
-                </div>
-                <div className={styles.formGroup}>
-                  <label htmlFor="description" className={styles.label}></label><br />
-                  <Input type="text" name='description' className={styles.formControl} id="description" placeholder="Description of the cake" />
-                </div>
-                <div className={styles.formGroup}>
-                  <label htmlFor="price" className={styles.label}></label><br />
-                  <Input type="text" name="price" className={styles.formControl} id="price" placeholder="Price" />
-                </div>
-                <div className={styles.formGroup}>
-                  <label htmlFor="location" className={styles.label}></label><br />
-                  <Input type="text" name="location" className={styles.formControl} id="location" placeholder="address" />
-                </div>
-                
-                <br />
-                <div className={styles.formGroup}>
-                  <input type="submit" className={styles.btn} value="Submit" /><br />
-                </div>
-              </form>
-            </div>
+                <label htmlFor="imgUploud" className={styles.label}>First Upload Your Cake image Please </label><br />
+                <input type="file" name="imgUploud" className={styles.formControl} id="imgUploud" onChange={handlimgUpload} />
+                <input type="hidden" name='imageUrl' value={url} />
+              </div>
+              <div className={styles.formGroup}>
+                <label htmlFor="name" className={styles.label}></label><br />
+                <Input type="text" name='name' className={styles.formControl} id="name" placeholder="Name of the cake" />
+              </div>
+              <div className={styles.formGroup}>
+                <label htmlFor="description" className={styles.label}></label><br />
+                <Input type="text" name='description' className={styles.formControl} id="description" placeholder="Description of the cake" />
+              </div>
+              <div className={styles.formGroup}>
+                <label htmlFor="price" className={styles.label}></label><br />
+                <Input type="text" name="price" className={styles.formControl} id="price" placeholder="Price" />
+              </div>
+              <div className={styles.formGroup}>
+                <label htmlFor="location" className={styles.label}></label><br />
+                <Input type="text" name="location" className={styles.formControl} id="location" placeholder="address" />
+              </div>
+
+              <br />
+              <div className={styles.formGroup}>
+                <input type="submit" className={styles.btn} value="Submit" /><br />
+              </div>
+            </form>
           </div>
         </div>
       </div>

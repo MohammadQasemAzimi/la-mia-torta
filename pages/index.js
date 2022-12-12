@@ -13,10 +13,15 @@ import { getSession } from 'next-auth/react';
 export default function Home(props) {
   const curUser = props.currentUser
   //send the props current user to navbar componont 
-  console.log(curUser)
-  const cakes = props.cakes;
 
   const [query, setQuery] = useState("");
+  const [cakes, setCakes] = useState(props.cakes);
+  useEffect(() => {
+    //if(query.length === 0 || query.length > 2)
+    setCakes(props.cakes.filter(cake => cake.name.toLowerCase().includes(query) || 
+    cake.description.toLowerCase().includes(query) || 
+    cake.location.toLowerCase().includes(query)))
+  }, [query])
   
   return (
     <>

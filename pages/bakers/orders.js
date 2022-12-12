@@ -12,8 +12,8 @@ export default function bakerOrder(props) {
   return (
     <>
       <Navbar curuser = {curUser}></Navbar>
-      <div className={styles.containerImg}>
-        <div className={styles.container}>
+      <div className={styles.container1}>
+        <div className={styles.containerImg}>
           <div className={styles.cards}>
             {orders.map(order => (<Card cake={order} key={order.id} />))}
           </div>

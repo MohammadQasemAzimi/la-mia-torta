@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 400px;
+  height: 500px;
   width: 100%;
   margin-top: 20px;
 }
@@ -128,11 +128,9 @@
   font-style: italic;
   padding-left: 20px;
   text-shadow: 1px 1px black;
+  animation: hamburger_puls 2s ease infinite;
 }
-.detailsCul2 h4:hover{
-  text-shadow: 1px 1px 10px white;
-  transition: 0.5s;
-}
+
 
 .detailsCul2 input{
   width: 50%;
@@ -158,6 +156,19 @@ form .button {
 
 form .button:hover {
   background-color: blueviolet;
+}
+@keyframes hamburger_puls {
+  
+  
+  0%{
+    opacity: 1;
+    text-shadow: 1px 1px 10px white;
+    transform: scale(1);
+  }
+  100%{
+    opacity: 0;
+    transform: scale(1);
+  }
 }
 @media(max-width:768px) {
   .slidShow{

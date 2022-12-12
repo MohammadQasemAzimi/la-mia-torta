@@ -3,24 +3,28 @@ import Image from "next/image"
 import styles from "../styles/UpdateCard.module.css";
 
 export default function Component({ cake }) {
-  console.log('image url is ', cake.imageurl)
   return (
-    <Link href={`/cakes/${cake.id}`}>
-      <div className={styles.card} >
-        <div className={styles.cardimg}>
-          <Image alt="cake image" height={100} width={100} src={cake.imageUrl}/>
-        </div>
-        <div className={styles.cardDetails}>
+
+    <div className={styles.card} >
+      <div className={styles.cardimg}>
+        <img src={cake.imageUrl} className={styles.cardimg1} />
+      </div>
+      <div className={styles.cardDetails}>
+        <div className={styles.topDetails}>
           <h5>{cake.name}</h5>
           <p>{cake.description}</p>
           <p>{cake.location}</p>
           <p>{cake.price}</p>
-          <Link className={styles.button} href={`/cakes/${cake.id}/edit`}>Edit</Link>
-          <Link className={styles.Delete} href={`/api/cakes/${cake.id}/delete`}>Delete</Link>
-          
         </div>
-
+        <div className={styles.downDetails}>
+          <div className={styles.selectOne} >
+            <Link className={styles.Edit} href={`/cakes/${cake.id}/edit`}>Edit</Link>
+          </div>
+          <div className={styles.selectOne} >
+            <Link className={styles.Delete} href="#">Delete</Link>
+          </div>
+        </div>
       </div>
-    </Link>
+    </div>
   )
 }

@@ -2,6 +2,7 @@ import cakesController from '../../../controllers/cakeController'
 import styles from '../../../styles/NewCake.module.css'
 import { Input } from 'reactstrap'
 import { useState } from 'react'
+import Navbar from '../../../components/Navbar';
 
 export default function NewCake({ cake }) {
   const [url, setUrl] = useState(cake.imageUrl)
@@ -20,6 +21,7 @@ export default function NewCake({ cake }) {
 
   return (
     <>
+      <Navbar></Navbar>
       <div className={styles.container}>
         <div className={styles.row}>
           <div className={styles.card}>
