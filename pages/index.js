@@ -13,7 +13,7 @@ import { getSession } from 'next-auth/react';
 export default function Home(props) {
   const curUser = props.currentUser
   //send the props current user to navbar componont 
-
+  
   const [query, setQuery] = useState("");
   const [cakes, setCakes] = useState(props.cakes);
   useEffect(() => {
@@ -80,7 +80,7 @@ export async function getServerSideProps(req, res) {
   }
   const cakes = await db.Cake.findAll()
   const stringfycakes = JSON.parse(JSON.stringify(cakes))
-
+  console.log('i am called from payment backend')
   return {
     props: { pswd: password, new: firstlogin, cakes: stringfycakes, currentUser: session?.user || null },
   }
