@@ -1,7 +1,7 @@
 import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 import userController from "../../../controllers/userController"
-
+//import styles from '../../../styles/login.module'
 import GithubProvider from "next-auth/providers/github"
 
 export const authOptions = {
@@ -21,7 +21,7 @@ export const authOptions = {
         try {
           //getorcreate one
           const user = await userController.getone(credentials.email,credentials.password)
-          console.log(user);
+          //console.log(user);
           if (user) {
             return user
           } else {

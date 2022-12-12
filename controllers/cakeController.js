@@ -2,7 +2,7 @@
 import db from '../database'
 
 const cakesController = {
-  
+
   all: async () => {
     const cakes = await db.Cake.findAll()
     const parsedCakes = JSON.parse(JSON.stringify(cakes))
@@ -18,23 +18,16 @@ const cakesController = {
     const cake = await db.Cake.create(data)
     return JSON.parse(JSON.stringify(cake))
   },
-  
   update: async (id, data) => {
     const cake = await db.Cake.findByPk(id)
     cake.update(data)
     return JSON.parse(JSON.stringify(cake))
   },
-
-
-  delete: async (data) => {
-    console.log(db.models)
-    const cake = await db.Cake.delete(data)
+  delete: async (id) => {
+    const cake = await db.Cake.findByPk(id)
+    cake.destroy()
     return JSON.parse(JSON.stringify(cake))
   },
-
-
- 
-  
 }
 
 export default cakesController

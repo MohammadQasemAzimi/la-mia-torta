@@ -16,8 +16,8 @@ export default function Component({ cake }) {
           <p>{cake.location}</p>
           <p>{cake.price}</p>
           <Link className={styles.button} href={`/cakes/${cake.id}/edit`}>Edit</Link>
-          <Link className={styles.Delete} href="#">Delete</Link>
-
+          <Link className={styles.Delete} href={`/api/cakes/${cake.id}/delete`}>Delete</Link>
+          
         </div>
 
       </div>

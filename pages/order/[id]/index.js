@@ -1,5 +1,5 @@
-import Navbar from '../../components/navcustomer'
-import styles from '../../styles/Payment.module.css'
+import Navbar from '../../../components/Navcustomer'
+import styles from '../../../styles/Payment.module.css'
 
 export default function payment() {
     return (

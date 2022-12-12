@@ -8,7 +8,7 @@ module.exports = {
       {
         name: 'AbdulKarim',
         lastName: 'Zahedi',
-        email: 'z@a.coma',
+        email: 'z@a.com',
         phoneNumber: '00397898788',
         address: 'Qalai Shada 2',
         password: '123',
@@ -16,7 +16,6 @@ module.exports = {
         updatedAt: new Date(),
       }], {});
   },
-
   async down (queryInterface, Sequelize) {
       await queryInterface.bulkDelete('Users', null, {});
   }

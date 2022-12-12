@@ -12,6 +12,16 @@ const userController = {
         })
         const parsedUser = await JSON.parse(JSON.stringify(user))
         return parsedUser
+    },
+    getUserByEmail: async(user) => {
+        const userId= await db.User.findOne({
+            where: {
+                email: user.email
+            }
+            
+        })
+        const parsedUser = await JSON.parse(JSON.stringify(userId))
+        return parsedUser
     }
 }
 

@@ -2,7 +2,7 @@ import styles from '../../styles/Baker.module.css';
 //import Navbaker from '../../components/navbaker';
 import db from '../../database';
 import UpdateCard from '../../components/UpdateCard';
-import Navbaker from '../../components/Navbaker'
+import Navbar from '../../components/Navbar';
 //import {getSession, signIn, signOut} from 'next-auth/react'; 
 
 import { getSession } from 'next-auth/react';
@@ -12,9 +12,11 @@ export default function Home(props) {
 
   //send the props current user to navbar componont 
   const cakes = props.cakes;
+  console.log(curUser)
+  console.log(cakes)
   return (
     <>
-      <Navbaker curuser={curUser}></Navbaker>
+      <Navbar></Navbar>
       <div className={styles.containerImg}>
         <div className={styles.container}>
 
@@ -40,15 +42,8 @@ export async function getServerSideProps(req, res) {
   /*const email = "s@g.com"
   session.user.email = email */
   const owner = await db.User.findOne({ where: { email: session.user.email } })
-  let cake = []
-  if (owner) {
-    cake = await db.Cake.findAll({ where: { UserId: owner.id } })
-  }
-  else {
-    throw `There is no created cakes with user ${session.user.email}`
-  }
+  let cake = await db.Cake.findAll({ where: { UserId: owner.id } })
   const stringfycakes = JSON.parse(JSON.stringify(cake))
-
   return {
     props: { cakes: stringfycakes, currentUser: session?.user || null },
   }

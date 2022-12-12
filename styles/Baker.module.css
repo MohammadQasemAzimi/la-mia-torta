@@ -3,7 +3,7 @@
     content: '';
     display: block;
     padding: 0 10% 0 0;
-    background-image: url('../public/image/bg.jpg');
+    background-image: url('/public/image/images.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

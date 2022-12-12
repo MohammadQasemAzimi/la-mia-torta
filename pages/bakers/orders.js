@@ -1,28 +1,26 @@
 import styles from '../../styles/Baker.module.css';
-import Navbaker from '../../components/Navbaker';
+import Navbar from '../../components/Navbar';
 import db from '../../database';
 import Card from '../../components/Card';
-
 import { getSession } from 'next-auth/react';
 
 export default function bakerOrder(props) {
   const curUser = props.currentUser;
-  console.log(props)
-
   //send the props current user to navbar componont 
   const orders = props.orders;
+  /* {console.log(orders)} */
   return (
     <>
-      <Navbaker curuser={curUser}></Navbaker>
+      <Navbar curuser = {curUser}></Navbar>
       <div className={styles.containerImg}>
-      <div className={styles.container}>    
-        <div className={styles.cards}>
-          {orders.map(order => (<Card cake={order} key={order.id} />))}
+        <div className={styles.container}>
+          <div className={styles.cards}>
+            {orders.map(order => (<Card cake={order} key={order.id} />))}
+          </div>
         </div>
       </div>
-      </div>
     </>
-  )
+  );
 }
 export async function getServerSideProps(req, res) {
   const session = await getSession(req) //await getSession(req)
@@ -35,19 +33,18 @@ export async function getServerSideProps(req, res) {
       }
     }
   }
-  const email = "s@g.com"
-  session.user.email = email
-  let orders = ''
-  const owner = await db.User.findOne({where:{email:session.user.email}})
-  if(owner){
-    //To do the: Find the orders of the baker
-    orders = await db.Order.findAll({where:{UserId:owner.id}})
-  }
-  else{
-    throw `There is no order with user ${session.user.email}`
-  }
+  /*   const email = "z@a.com"
+    session.user.email = email */
+  const user = await db.User.findOne({ where: { email: session.user.email } })
+  const orders = await db.Cake.findAll({
+    where: { UserId: user.id },
+    include: [{ model: db.Order, include: db.User }]
+  })
+  /*   const orders = await db.Order.findAll({
+      where: { UserId: user.id },
+      include: [{ model: db.Cake, include: db.User }]
+    }) */
   const stringfyOrders = JSON.parse(JSON.stringify(orders))
-
   return {
     props: { orders: stringfyOrders, currentUser: session?.user || null },
   }
