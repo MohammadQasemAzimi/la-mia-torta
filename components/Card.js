@@ -11,9 +11,9 @@ export default function Component({ cake }) {
         <div className={styles.cardDetails}>
           <div className={styles.topDetails}>
             <h5>{cake.name}</h5>
-            <p>{cake.description}</p>
-            <p>{cake.location}</p>
-            <p>{cake.price}</p>
+            <p className={styles.description}>{cake.description}</p>
+            <h6>{cake.location}</h6>
+            <h6>{cake.price}$</h6>
           </div>
           <div className={styles.downDetails}>
             <a href={`/cakes/${cake.id}`} className={styles.selectOne} >

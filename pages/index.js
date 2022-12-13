@@ -17,7 +17,7 @@ export default function Home(props) {
   const [query, setQuery] = useState("");
   const [cakes, setCakes] = useState(props.cakes);
   useEffect(() => {
-    //if(query.length === 0 || query.length > 2)
+    //if(query.length === 0 || query.length > 0)
     setCakes(props.cakes.filter(cake => cake.name.toLowerCase().includes(query) || 
     cake.description.toLowerCase().includes(query) || 
     cake.location.toLowerCase().includes(query)))
@@ -25,23 +25,14 @@ export default function Home(props) {
   
   return (
     <>
-      {props.new ? 
-        <div class="alert alert-info" role="alert">
-          Your Initial Password is : {props.pswd}
-        </div> :
-        <h6></h6>
-     }
       <Navbar curuser={curUser}></Navbar>
       <div className={styles.containerImg}>
         <div className={styles.container}>
-          <div className={styles.searchForm}>
-            <form className={styles.serachForm} onSubmit="event.preventDefault();" role="search">
-              <label className={styles.serachlabel} htmlFor="search">Serach you Cake in here ...</label>
-              <input className={styles.serachinput} id="search" type="search" placeholder="Search..." autoFocus required />
-              <button className={styles.serachbutton} type="submit">Go</button>
-            </form>
+          <div className={styles.searchBar}>
+            <h4 className={styles.searchTitle}>search your favorite cake here:</h4>
+            <input className={styles.search} type="text" placeholder="Search..."  onChange={(e) => setQuery(e.target.value)}/>
           </div>
-          <div className={styles.cards}>            
+          <div className={styles.cards}>
             {cakes.map((cake, index) => (<Card cake={cake} key={cake.id} />))}
           </div>
         </div>

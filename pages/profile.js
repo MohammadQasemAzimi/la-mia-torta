@@ -1,5 +1,5 @@
 //disply orders by customer
-import styles from '../styles/Baker.module.css';
+import styles from '../styles/profile.module.css';
 import Navbar from '../components/Navbar';
 import db from '../database';
 import Card from '../components/Card';

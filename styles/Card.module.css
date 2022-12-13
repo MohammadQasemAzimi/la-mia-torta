@@ -49,7 +49,7 @@
   font-size: 15px;
   color: white;
 }
-.cardDetails p {
+.cardDetails h6 {
   display: grid;
   margin-left: 10px;
   color: white;
@@ -58,8 +58,18 @@
   text-align: justify;
   overflow-wrap: break-word;
   word-wrap: break-word;
-  hyphens: auto;
 }
+.description{
+  display: grid;
+  margin-left: 10px;
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: justify;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
 
 
 .downDetails{
@@ -101,6 +111,7 @@
   .cardimg {
     height: 100px;
     background-size: cover;
+    background-color: blueviolet;
   }
   .cardDetails {
     display: flex;
@@ -111,13 +122,23 @@
     max-width: 1000px;
     height: auto;
   }
+  .description {
+    background-color: white;
+    height: 60px;
+    text-align: justify;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    overflow-y: scroll;
+  }  
   .downDetails{
     align-items: center;
+    height: 100%;
     width: 100%;
     margin-top: 1vh;
     margin-bottom: 1vh;
   }
   .button {
+    height: 100%;
     width: 30%;
     font-size: 10px;
     background-color: rgb(247, 145, 206);
@@ -126,5 +147,6 @@
     box-shadow: 1px 2px 5px 1px black;
     transition: 0.5s;
   }
+
 
 }
