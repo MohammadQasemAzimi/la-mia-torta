@@ -2,10 +2,6 @@ import styles from "../styles/Navbar.module.css";
 import { signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
-<<<<<<< HEAD
-=======
-
->>>>>>> d63c1826e34b2c3d78d3f76a0f711a006ab2b92c
 export default function Component() {
     return (
         <>
