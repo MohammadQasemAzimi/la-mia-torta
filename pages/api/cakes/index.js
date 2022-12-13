@@ -4,7 +4,7 @@ export default async function handler(req, res) {
     if (req.method === "POST") {
         // TODO take the title and description from the request body
         const { name, description, price, location, imageUrl } = req.body
-        const user = await db.User.findOne({where:{email:req.body.usersession}})
+        const user = await db.User.findOne({where:{email:req.body.email}})
         const UserId = user.id
         const cake = await cakeController.create({
             name, description, price, location, imageUrl, UserId
