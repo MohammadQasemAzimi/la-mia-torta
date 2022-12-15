@@ -10,10 +10,12 @@
   margin: 0 auto;
   padding: 0 10% 0 0;
 }
-.cardTitle{
+.cardTitle {
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 30px;
   text-align: center;
 }
-.cardTitle span{
+.cardTitle span {
   color: #f08080a3;
 }
 .cards{
@@ -21,5 +23,5 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 40px;
 }

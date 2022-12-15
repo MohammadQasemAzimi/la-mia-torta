@@ -15,6 +15,7 @@ export default function Home(props) {
   return (
     <>
       <Navbar curuser={curUser} profile={user}></Navbar>
+      <h2 className={styles.cardTitle}>My <span>Cakes</span></h2>
       <div className={styles.container1}>
         <div className={styles.containerImg}>
           <div className={styles.container}>

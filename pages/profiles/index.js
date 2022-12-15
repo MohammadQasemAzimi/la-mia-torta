@@ -4,9 +4,6 @@ import Navbar from '../../components/Navbar';
 //import {getSession, signIn, signOut} from 'next-auth/react'; 
 import { getSession } from 'next-auth/react';
 import { Input } from 'reactstrap';
-import { useState } from 'react';
-
-
 
 export default function getProfile(props) {
   const curUser = props.currentUser

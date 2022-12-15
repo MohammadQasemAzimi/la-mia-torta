@@ -1,8 +1,9 @@
-import styles from '../../styles/Card.module.css';
+import styles from '../../styles/Baker.module.css';
 import Navbar from '../../components/Navbar';
 import db from '../../database';
 import OrdersCard from '../../components/OrdersCard';
 import { getSession } from 'next-auth/react';
+
 
 export default function bakerOrder(props) {
   const curUser = props.currentUser;
@@ -13,6 +14,7 @@ export default function bakerOrder(props) {
   return (
     <>
       <Navbar curuser={curUser} profile={user}></Navbar>
+      <h2 className={styles.cardTitle}>My <span>Orders</span></h2>
       <div className={styles.container1}>
         <div className={styles.containerImg}>
           <div className={styles.cards}>

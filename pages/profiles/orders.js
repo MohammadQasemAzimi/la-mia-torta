@@ -12,7 +12,6 @@ export default function customerOrder(props) {
     return (
         <>
             <Navbar curuser={curUser} profile={user}></Navbar>
-            <br/><br/>
             <h2 className={styles.cardTitle}>My <span>Requests</span></h2>
             <div className={styles.containerImg}>
                 <div className={styles.container}>
