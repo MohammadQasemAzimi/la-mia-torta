@@ -20,31 +20,25 @@ export default function Order(props) {
                     <table className={styles.newTable}>
                         <thead>
                             <tr className={styles.tableRow}>
-                                <th className={styles.tableTitle}>No</th>
                                 <th className={styles.tableTitle}>Description</th>
                                 <th className={styles.tableTitle}>Your Order</th>
                             </tr>
                         </thead>
                         <tr>
-                            <th><h4>1</h4></th>
-                            <td><h4 className={styles.orderid}>Your Product orderID: </h4></td>
-                            <td><h4>{order[0].id}</h4> </td>
+                            <td className={styles.destination1}><h4>Your Product orderID: </h4></td>
+                            <td className={styles.destination2}><h4>{order[0].id}</h4> </td>
                         </tr>
                         <tr>
-                            <th><h4>2</h4></th>
-                            <td><h4 className={styles.cake}>Name of the cake: </h4></td>
-                            <td><h4>{order[0].Cake.name}</h4></td>
+                            <td className={styles.destination1}><h4>Name of the cake: </h4></td>
+                            <td className={styles.destination2}><h4>{order[0].Cake.name}</h4></td>
                         </tr>
                         <tr>
-                            <th><h4>3</h4></th>
-                            <td><h4 className={styles.price}>Total amount: </h4></td>
-                            <td><h4>{order[0].Cake.price}</h4></td>
+                            <td className={styles.destination1}><h4>Total amount: </h4></td>
+                            <td className={styles.destination2}><h4>{order[0].Cake.price}</h4></td>
                         </tr>
                         <tr>
-                            <th><h4>4</h4></th>
-                            <td><h4 className={styles.status}>status:</h4></td>
-                            <td><h4>{order[0].status}</h4></td>
-                            <td>35</td>
+                            <td className={styles.destination1}><h4>status:</h4></td>
+                            <td className={styles.destination2}><h4>{order[0].status}</h4></td>
                         </tr>
                     </table>
                     {order[0].status == "confirmed" ?
